@@ -1,4 +1,5 @@
-# nebula-bites
+🚀 Nebula Bites
+
 A space-themed restaurant web app built with pure HTML, CSS, and JavaScript.
 Explore an interactive menu, add items to your cart, and experience a futuristic food ordering interface.
 
@@ -49,44 +50,4 @@ Add wishlist feature
 
 This project was built as a practice project and is not connected to a real backend or payment system.
 
-لو عايزه أقصره شوية عشان submission في Hack Club أو أخليه أقوى/أفخم كـ CV project قولي وأنا أظبطهولك 🔥
 
-اعنله
-
-حلو، ده نسخة أقصر وأنضف ومناسبة لـ Hack Club submission 👇
-
-🚀 Nebula Bites
-
-A space-themed restaurant web app built using HTML, CSS, and JavaScript.
-
-🌌 About
-
-Nebula Bites is a front-end project that simulates an online food ordering experience with a futuristic design.
-Users can browse the menu, search, filter items, and manage a shopping cart.
-
-✨ Features
-Add to cart system
-Live search
-Category filters
-Orders section
-Login & signup UI
-Local storage support
-🛠️ Tech Stack
-HTML
-CSS
-JavaScript
-📂 Structure
-index.html
-style.css
-script.js
-/images
-⚙️ Run Locally
-Download the project
-Open index.html in your browser
-🚧 Future Plans
-Backend integration
-Payment system
-UI improvements
-📌 Note
-
-This is a front-end practice project (no real backend).
