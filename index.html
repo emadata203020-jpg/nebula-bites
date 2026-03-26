@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Nebula Bites|</title>
+    <meta name="description" content="Order delicious food from our restaurant">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <i class="fas fa-rocket"></i>
+                    Nebula Bites
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link ">Menu</a></li>
+                    <li><a href="#orders" class="nav-link ">Orders</a></li>
+                    <li><a href="#login" class="nav-link ">Login</a></li>
+                </ul>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart<span class="cart-count" id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Experience Cosmic Flavors</h1>
+                    <p>Empark on a culinary journey through the galaxy with ou space-inspired dishes. From interstellar
+                        burgers to nebula noodles, every bite is an adventure.</p>
+                    <button class="cta-button" id="orderNowBtn">
+                        <i class="fas fa-bolt"></i>order now
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Our<span> Galactic menu</span></h2>
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="searchinput"
+                        placeholder="search for cosmic delights...">
+                </div>
+                <div class="filters" id="categoryFilters">
+                </div>
+                <div class="products-grid" id="productsGrid">
+                </div>
+            </div>
+        </section>
+        <section id="orders" class="orders-page" style="display:none;">
+            <div class="container">
+                <h2 class="section-title">your<span>space orders</span></h2>
+                <div class="orders-grid" id="ordersGrid">
+                </div>
+            </div>
+        </section>
+        <section id="login" class="auth-page" style="display:none;">
+            <div class="auth-container">
+                <div class="auth-tab">
+                    <button class="auth-tabs active" data-tab="login">login</button>
+                    <button class="auth-tabs" data-tab="signup">Sign Up</button>
+                </div>
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" id="loginEmail" required>
+                        <div class="error-message" id="loginEmailEror"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" id="loginPassword" required>
+                        <div class="error-message" id="loginPasswordError"></div>
+                    </div>
+                    <button type="submit" class="auth-btn">Login to Orbit</button>
+                </form>
+                <form id="signupForm" class="auth-form">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="signupName" required>
+                        <div class="error-message" id="signupNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" id="signupEmail" required>
+                        <div class="error-message" id="signupEmailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" id="signupPassword" required>
+                        <div class="error-message" id="signupPasswordError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-input" id="signupConfirmPassword" required>
+                        <div class="error-message" id="signupConfirmPasswordError"></div>
+                    </div>
+                    <button type="submit" class="auth-btn">Create Account</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="total-label">Total:</span>
+                <span class="total-amount" id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fas fa-rocket"></i> Launch Checkout
+            </button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message">Item added to cart!
+        </span>
+    </div>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Nebula Bites</h4>
+                    <p>Delivering cosmic flavors to your doorstep. Experience interstellar cuisine like never before.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Qiuck Links</h4>
+                    <ul class="footer-links" id="footerLinks">
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>123 Galaxy Street, Space city</p>
+                    <p><i class="fas fa-phone"></i>(555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i>contact@nebulabites.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nebula Bites. All rights reserved.| Made with <i class="fas fa-heart"
+                        style="color:var(--primary);"></i> for space food lovers</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
