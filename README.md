@@ -7,6 +7,7 @@ Explore an interactive menu, add items to your cart, and experience a futuristic
 
 Nebula Bites is a front-end project that simulates an online restaurant experience with a unique cosmic theme.
 The goal was to practice DOM manipulation, state management, and building a complete UI without any frameworks.
+
 ✨ Features
 🛒 Add to cart system (with quantity control)
 🔍 Live search functionality
